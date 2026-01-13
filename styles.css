@@ -257,7 +257,7 @@ iframe {
 
 #main {
     height: 718px;
-    background: url('/images/background.png') no-repeat center center/cover;
+    background: url('images/background.png') no-repeat center center/cover;
 }
 
 /* ============================================================
@@ -275,7 +275,7 @@ iframe {
 
 @media (max-width: 768px) {
     #main {
-    background: url('/images/backgroundmobile.png') no-repeat center center/cover;
+    background: url('images/backgroundmobile.png') no-repeat center center/cover;
 }
     .hero {
         justify-content: center;
