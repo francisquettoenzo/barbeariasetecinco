@@ -1,0 +1,340 @@
+/* Importação de fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600;700&display=swap');
+
+/* Variáveis de Cores */
+:root {
+    --primary-color: #1f2f6b;
+    --primary-glow: rgba(63, 94, 251, 0.35);
+    --secondary-color: #ffffff;
+    --dark-bg: #0b1020;
+    --glass-bg: rgba(15, 20, 40, 0.6);
+    --text-light: #eaeaea;
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--secondary-color);
+    color: #222;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1.5px;
+    color: var(--primary-color);
+}
+
+.container {
+    margin: auto;
+    padding: 0 20px;
+    overflow: hidden; 
+}
+
+h1 { font-size: 3.5em; }
+h2 { font-size: 2.5em; text-align: center; margin-bottom: 40px; }
+h3 { font-size: 1.8em; }
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+ul {
+    list-style: none;
+}
+
+.btn:hover {
+    background: #1e3a5f;
+}
+
+.whatsapp-btn {
+    background: #1e3a5f;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    position: fixed;
+    border-radius: 50px;
+    bottom: 30px;
+    right: 20px;
+    z-index: 9999;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 12px 25px;
+    transition: background 0.3s ease;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.whatsapp-btn:hover {
+    background: rgb(29, 89, 168);
+}
+
+.section-padded {
+    padding: 20px 0;
+}
+
+.bg-light {
+    background: var(--light-bg);
+}
+
+#hero-title {
+    font-size: 4em;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.hero { 
+    color: var(--secondary-color);
+    height: 0vh;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Navbar DESKTOP (Mantida exatamente como você fez) */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 20%;
+    padding: 14px 100px;
+    display: flex;
+    margin-top: 15px;
+    margin-left: 40%;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    z-index: 100;
+}
+
+.preco-servico {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-top: 10px;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar ul li a {
+    color: var(--text-light);
+    font-weight: 600;
+    font-size: 0.95rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #fff;
+}
+
+.navbar ul li a:hover::after {
+    width: 100%;
+}
+
+.services-cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+    margin-bottom: 100px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    width: 250px;
+    border-radius: 16px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.service-card img {
+    width: 100%;
+    display: block;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.service-card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 30px 60px rgba(63, 94, 251, 0.35);
+}
+
+.gallery-shell {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-carousel {
+    overflow: hidden;
+    border-radius: 50px;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 30px;
+    transition: transform 0.6s ease
+}
+
+.carousel-track img {
+    min-width: 320px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(15, 20, 40, 0.8);
+    border: none;
+    color: #fff;
+    font-size: 2.4rem;
+    padding: 3px 18px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.carousel-btn.prev { left: -70px; }
+.carousel-btn.next { right: -70px; }
+
+.contact-info {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.1em;
+}
+
+iframe {
+    border-radius: 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    width: 100%; /* Garante que o mapa não estoure o mobile */
+}
+
+.footer {
+    background: var(--dark-bg);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 50px;
+}
+
+#main {
+    height: 718px;
+    background: url('/images/background.png') no-repeat center center/cover;
+}
+
+/* ============================================================
+   BLOQUEIO DE RESPONSIVIDADE (MEDIA QUERIES) 
+   Aqui eu conserto o mobile sem tocar no código acima
+   ============================================================ */
+
+@media (max-width: 1024px) {
+    .navbar {
+        width: 100%;      /* No tablet/celular ela não pode ter 20% */
+        margin-left: 10%; /* Ajusta a margem para centralizar */
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    #main {
+    background: url('/images/backgroundmobile.png') no-repeat center center/cover;
+}
+    .hero {
+        justify-content: center;
+    }
+    .navbar {
+        width: 80%;
+        margin-left: 5%;
+        margin-top: 10px;
+        justify-content: center;
+        padding: 10px;
+        flex-direction: row; /* Mantém itens lado a lado se couber */
+    }
+
+    .navbar ul {
+        gap: 20px;
+    }
+
+    .navbar ul li a {
+        font-size: 0.8rem;
+    }
+
+    #hero-title {
+        font-size: 2.5em; /* Diminui o título no celular */
+    }
+
+    .carousel-btn.prev { left: 20px; }
+    .carousel-btn.next { right: 20px; }
+
+    .carousel-track img {
+        min-width: 85vw;
+        height: 360px;
+        margin-left: 12px;
+    }
+
+    .service-card {
+        width: 100%; /* Card ocupa a largura no mobile */
+        max-width: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        border-radius: 20px;
+    }
+    
+    .navbar ul {
+        display: flex;
+        flex-wrap: wrap; /* Se o menu for grande, ele quebra linha e não some */
+        justify-content: center;
+        gap: 10px;
+    }
+
+    h1 { font-size: 2.2em; }
+    h2 { font-size: 1.8em; }
+    
+    .whatsapp-btn {
+        padding: 10px 15px;
+        font-size: 0.9em;
+        bottom: 20px;
+        right: 10px;
+    }
+}
